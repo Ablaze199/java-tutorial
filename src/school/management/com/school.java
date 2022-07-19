@@ -4,13 +4,13 @@ import java.util.List;
 
 /*
 the school can have many teachers, many students,
-implement teachers and student using an ArrayList
+implement teachers and student using an ArrayList <List>
  */
 public class school {
     private List<Teachers> Teachers;
     private List<students>  Students;
-    private int totalMoneyEarned;
-    private int totalMoneySpent;
+    private static  int totalMoneyEarned;
+    private static int totalMoneySpent;
 
     /**
      * new school object is created
@@ -40,7 +40,7 @@ public class school {
         Teachers.add(teacher);
     }
 
-    public List<school.management.com.students> getStudents() {
+    public List<students> getStudents() {
         return Students;
     }
 
@@ -62,7 +62,7 @@ public class school {
      * @param MoneyEarned
      */
 
-    public void updateTotalMoneyEarned(int MoneyEarned) {
+    public static void updateTotalMoneyEarned(int MoneyEarned) {
         totalMoneyEarned += MoneyEarned;
     }
 
@@ -75,7 +75,7 @@ public class school {
      * giving by the school to its teachers
      * @param totalMoneySpent
      */
-    public void updateTotalMoneySpent(int moneySpent) {
+    public  static void updateTotalMoneySpent(int moneySpent) {
        totalMoneySpent-=moneySpent;
     }
 }

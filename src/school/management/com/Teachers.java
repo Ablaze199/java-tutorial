@@ -7,6 +7,7 @@ public class Teachers {
     private int id;
     private String name;
     private int salary;
+    private  int salaryEarned;
 
     /**
      * creates a new teacher object
@@ -18,6 +19,7 @@ public class Teachers {
         this.id=id;
         this.name=name;
         this.salary=salary;
+        this.salaryEarned=0;
     }
     public int getId(){
         return id;
@@ -39,5 +41,19 @@ public class Teachers {
         this.salary=salary;
     }
 
+    /**
+     * adds total salary earned
+     * removes from the total money earned to the school
+     * @param salary
+     */
+  public void receiveSalary(int salary) {
+        salaryEarned+=salary;
+        school.updateTotalMoneySpent(salary);
+  }
 
+    @Override
+    public String toString()
+        return "students of the teacher" + name
+    +"to"
+    }
 }

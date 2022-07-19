@@ -20,8 +20,9 @@ public class students {
         this.grade=grade;
     }
 
-    public void updateFeesPaid(int fees) {
+    public void payFees(int fees) {
         feesPaid+=fees;
+        school.updateTotalMoneyEarned(feesPaid);
     }
       /*
       return id of the students
@@ -48,4 +49,7 @@ public class students {
         return feesTotal;
     }
 
+    public int getRemainingFees(){
+        return feesTotal - feesPaid;
+    }
 }
